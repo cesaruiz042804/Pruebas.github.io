@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Encriptador</title>
+    </head>
+
+    <body>
+        <div class="info">
+            <h1 id="titulo" >Encriptador</h1>
+            <textarea id="caja" cols="40" rows="4">Escribe algo</textarea>
+            <div class="botones">
+                <button id="btn_encriptar">Encriptar</button>
+                <button id="btn_desencriptar">Desencriptar</button>
+            </div>
+            <textarea id="resp" cols="40" rows="4"></textarea>
+            <button id="btn_copiar">Copiar</button>
+        </div>
+    </body>
+
+    <script>
+        function ENCRIPTAR(){
+            var caja_texto = document.getElementById("caja").value;
+            var dato = caja_texto
+            .replaceAll(/b/img, "01")
+            .replaceAll(/c/img, "02")
+            .replaceAll(/d/img, "03")
+            .replaceAll(/f/img, "05")
+            .replaceAll(/g/img, "06")
+            .replaceAll(/h/img, "07")
+            .replaceAll(/j/img, "09")
+            .replaceAll(/k/img, "0A")
+            .replaceAll(/l/img, "0B")
+            .replaceAll(/m/img, "0C")
+            .replaceAll(/n/img, "0D")
+            .replaceAll(/ñ/img, "0F")
+            .replaceAll(/p/img, "11")
+            .replaceAll(/q/img, "12")
+            .replaceAll(/r/img, "13")
+            .replaceAll(/s/img, "14")
+            .replaceAll(/t/img, "15")
+            .replaceAll(/v/img, "17")
+            .replaceAll(/w/img, "18")
+            .replaceAll(/x/img, "19")
+            .replaceAll(/z/img, "21");
+            resp.value = dato;
+        }
+
+        function DESENCRIPTAR(){
+            var caja_texto = document.getElementById("caja").value;
+            var dato = caja_texto
+            .replaceAll(/01/img, "b")
+            .replaceAll(/02/img, "c")
+            .replaceAll(/03/img, "d")
+            .replaceAll(/05/img, "f")
+            .replaceAll(/06/img, "g")
+            .replaceAll(/07/img, "h")
+            .replaceAll(/09/img, "j")
+            .replaceAll(/0A/img, "k")
+            .replaceAll(/0B/img, "l")
+            .replaceAll(/0C/img, "m")
+            .replaceAll(/0D/img, "n")
+            .replaceAll(/0F/img, "ñ")
+            .replaceAll(/11/img, "p")
+            .replaceAll(/12/img, "q")
+            .replaceAll(/13/img, "r")
+            .replaceAll(/14/img, "s")
+            .replaceAll(/15/img, "t")
+            .replaceAll(/17/img, "v")
+            .replaceAll(/18/img, "w")
+            .replaceAll(/19/img, "x")
+            .replaceAll(/21/img, "z");
+            resp.value = dato;
+        }
+
+        function COPY(){
+            var caja_texto = document.getElementById("caja").value;
+            navigator.clipboard.writeText(resp.value);
+        }
+
+        btn_encriptar.onclick = ENCRIPTAR;
+        btn_desencriptar.onclick = DESENCRIPTAR;
+        btn_copiar.onclick = COPY;
+    </script>
+</html>
