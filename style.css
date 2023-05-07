@@ -73,4 +73,9 @@ textarea:hover{
         left: 30%;
         border-radius: 2%; 
     }
+    #titulo{
+        position: relative;
+        left: 65px;
+        color: #ffef0e;
+    }
 }
