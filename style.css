@@ -54,8 +54,8 @@ button{
 
 button:hover{
     border: 3px solid rgb(139, 150, 185);
-    width: 60px;
-    height: 40px;
+    width: 125px;
+    height: 35px;
 }
 
 button:active{
