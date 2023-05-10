@@ -1,5 +1,10 @@
-html{
-    background: #4e54c8;
+body{
+    width: 900px;
+    height: 800px;
+    background-image: linear-gradient(rgb(91, 53, 9) 400px, rgb(179, 138, 86) 800px, rgb(223, 207, 178) 900px);
+    padding: 0%;
+    margin: 0%;
+    border: 0cm;
 }
 
 #titulo{
