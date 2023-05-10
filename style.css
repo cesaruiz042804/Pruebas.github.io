@@ -1,7 +1,7 @@
 body{
     width: 900px;
     height: 800px;
-    background-image: linear-gradient(rgb(91, 53, 9) 400px, rgb(179, 138, 86) 800px, rgb(223, 207, 178) 900px);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     padding: 0%;
     margin: 0%;
     border: 0cm;
